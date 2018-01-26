@@ -28,6 +28,11 @@ app.get('/about', (req, res) => {
         currentYear: new Date().getFullYear()
     });
 });
+app.get('/projects', (req,res) => {
+res.render('projects.hbs',{
+    pageTitle: 'Projects Page'
+})
+});
 app.get('/bad-request', (req,res) => {
     res.send({
         statusCode: 404,
